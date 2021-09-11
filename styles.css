@@ -80,6 +80,28 @@ text-align: center;
 #meditation-bell-image {
   position: relative;
   margin: auto;
+  opacity: 1;
+  -webkit-transition: opacity 1.5s ease-in-out;
+  -moz-transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
+}
+
+#meditation-bell-image.fade {
+  opacity: 0;
+}
+
+.message-text{
+  position: relative;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease-in-out;
+  -moz-transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
+
+}
+
+.message-text.fade {
+  opacity: 1;
 }
 
 .meditation-pop-up-message {

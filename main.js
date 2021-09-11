@@ -53,7 +53,7 @@ var meditationBell = document.querySelector('#meditation-bell-image');
 
 //Event Listener
 
-receiveButton.addEventListener("click", userChoose);
+receiveButton.addEventListener("click", bellFade);
 
 
 function userChoose() {
@@ -68,4 +68,12 @@ var mantraOutput = mantras[Math.floor(Math.random() * mantras.length)];
       messageText.innerHTML = mantraOutput;
   } else
       console.log("Please select a daily message.");
+}
+
+function bellFade() {
+  meditationBell.classList.toggle('fade')
+}
+
+function textFade() {
+  messageText.classList.toggle('fade')
 }
