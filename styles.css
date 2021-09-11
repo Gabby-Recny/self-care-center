@@ -40,21 +40,25 @@ text-align: center;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
+  padding: 10px;
 }
 
 .receive-message-button {
   font-family: sans-serif;
+  font-style: italic;
   font-size: 15px;
   color: #000000;
   background-color: #33babb;
   padding: 5px 15px;
   border: 0;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 #type-of-message {
   font-family: sans-serif;
   font-size: 15px;
+  font-style: italic;
   color: #000000;
 }
 
@@ -68,12 +72,19 @@ text-align: center;
   width: 650px;
   background-color: #ffffff;
   border-radius: 25px;
-  position: relative;
-  margin-top: 35px;
-  margin-left: 300px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 2%
 }
 
 #meditation-bell-image {
   position: relative;
   margin: auto;
+}
+
+.meditation-pop-up-message {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #000000;
 }
