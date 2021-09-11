@@ -46,7 +46,7 @@ var receiveButton = document.querySelector('.receive-message-button');
 
 var messageBox = document.querySelector('.meditation-message-box');
 
-var messageText = document.querySelector('p');
+var messageText = document.querySelector('.message-text');
 
 var meditationBell = document.querySelector('#meditation-bell-image');
 
@@ -56,7 +56,6 @@ var meditationBell = document.querySelector('#meditation-bell-image');
 receiveButton.addEventListener("click", userChoose);
 
 
-
 function userChoose() {
 var affirmationChoice = document.getElementById("affOne");
 var affirmationOutput = affirmations[Math.floor(Math.random() * affirmations.length)];
@@ -64,9 +63,9 @@ var mantraChoice = document.getElementById("manTwo");
 var mantraOutput = mantras[Math.floor(Math.random() * mantras.length)];
 
   if (affirmationChoice.checked === true) {
-      console.log(affirmationOutput);
+      messageText.innerHTML = affirmationOutput;
   } else if (mantraChoice.checked === true) {
-      console.log(mantraOutput);
+      messageText.innerHTML = mantraOutput;
   } else
       console.log("Please select a daily message.");
 }
