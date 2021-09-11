@@ -41,62 +41,32 @@ function getRandomIndex(array) {
 
 
 //Query Selectors
-//
-//
+
 var receiveButton = document.querySelector('.receive-message-button');
-//
-// var radioSelector = document.querySelectorAll(".message-choice-box input[name='message']")
 
 var messageBox = document.querySelector('.meditation-message-box');
+
+var messageText = document.querySelector('p');
+
+var meditationBell = document.querySelector('#meditation-bell-image');
 
 
 //Event Listener
 
-// receiveButton.addEventListener("click", generateMessage);
+receiveButton.addEventListener("click", userChoose);
 
-
-//   //The radio selector does not need an input value--the user already selects it
-//   //Think event targets
-
-// function generateMessage() {
-//   if (message.userSelectedAffirmationMessage) {
-//     return getRandomIndex(affirmations);
-//   } else if (message.userSelectedMantraMessage) {
-//     return getRandomIndex(mantras);
-//   } else {
-//     return "Please select mantra or affirmation"
-//   }
-// }
 
 
 function userChoose() {
 var affirmationChoice = document.getElementById("affOne");
+var affirmationOutput = affirmations[Math.floor(Math.random() * affirmations.length)];
 var mantraChoice = document.getElementById("manTwo");
+var mantraOutput = mantras[Math.floor(Math.random() * mantras.length)];
 
   if (affirmationChoice.checked === true) {
-      console.log("This is your daily affirmation...");
+      console.log(affirmationOutput);
   } else if (mantraChoice.checked === true) {
-      console.log("This is your daily mantra...");
+      console.log(mantraOutput);
   } else
       console.log("Please select a daily message.");
 }
-
-
-
-
-
-
-// <input type="radio" id="affOne"
-//  name="message" value="affirmation-choice">
-//  <label for="affirmation-choice">affirmation</label>
-// <input type="radio" id="manTwo"
-//   name="message" value="mantra-choice">
-//   <label for="mantra-choice">mantra</label>
-// </div>
-
-
-
-
-
-//able to add multiple events to the same element
-//
