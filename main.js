@@ -1,6 +1,6 @@
 var mantras = [
-  "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
-  "Don’t let yesterday take up too much of today.",
+  "Breathing in, I send myself love. <br> Breathing out, I send love to someone else who needs it.",
+  "Don't let yesterday take up too much of today.",
   "Every day is a second chance.",
   " Tell the truth and love everyone.",
   "I am free from sadness.",
@@ -35,10 +35,6 @@ var affirmations = [
 ];
 
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-}
-
 
 //Query Selectors
 
@@ -50,30 +46,56 @@ var messageText = document.querySelector('.message-text');
 
 var meditationBell = document.querySelector('#meditation-bell-image');
 
+var affirmationChoice = document.getElementById("affOne");
+
+var mantraChoice = document.getElementById("manTwo");
+
+var defaultBackground = document.querySelector('body');
+
+var mantraBackground = document.querySelector(".mantra-background")
+
+var affirmationBackground = document.querySelector(".affirmation-background")
 
 //Event Listener
 
-receiveButton.addEventListener("click", bellFade);
+receiveButton.addEventListener("click", getWoke);
 
+
+function getWoke() {
+  userChoose();
+  bellFade();
+  textFade();
+}
 
 function userChoose() {
-var affirmationChoice = document.getElementById("affOne");
 var affirmationOutput = affirmations[Math.floor(Math.random() * affirmations.length)];
-var mantraChoice = document.getElementById("manTwo");
 var mantraOutput = mantras[Math.floor(Math.random() * mantras.length)];
 
   if (affirmationChoice.checked === true) {
       messageText.innerHTML = affirmationOutput;
+
+      defaultBackground.style.background = "red";
+
+      // defaultBackground.classList.add('affirmationBackground');
+      // defaultBackground.classList.remove('mantraBackground');
+
   } else if (mantraChoice.checked === true) {
       messageText.innerHTML = mantraOutput;
-  } else
-      console.log("Please select a daily message.");
+      
+      defaultBackground.style.background = "blue";
+
+      // defaultBackground.classList.add('mantraBackground');
+      // defaultBackground.classList.remove('affirmationBackground');
+
+  } else {
+      messageText.innerText = "Please select a daily message.";
+    }
 }
 
 function bellFade() {
-  meditationBell.classList.toggle('fade')
+  meditationBell.classList.add('fade')
 }
 
 function textFade() {
-  messageText.classList.toggle('fade')
+  messageText.classList.add('fade')
 }

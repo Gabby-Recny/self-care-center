@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <main>
-    <section class="main-title">
+  <body>
+    <section class="title">
       <h2><span>&#10024;</span>Self Care Center
             <span>&#10024;</span></h2>
     </section>
@@ -13,12 +14,12 @@
     <br>
     <br>
     <br>
-    <section class="question-title">
-      <h3> What type of message?</h3>
+    <section class="sub-title">
+      <h3>What type of message?</h3>
     </section>
 
-    <section class="message-choice-box">
-        <div>
+    <section class="message-choice-box body-text">
+        <div class="radio-selectors">
           <input type="radio" id="affOne"
            name="message" value="affirmation-choice">
            <label for="affirmation-choice">affirmation</label>
@@ -36,14 +37,11 @@
     </section>
 
     <section class="meditation-message-box">
-      <p class="message-text"></p>
+      <div class="message-text body-text"></div>
         <div id="meditation-bell-image">
           <img width="100" height="100" src="assets/meditate.svg" alt="Meditation Bell"/>
         </div>
     </section>
-
-
-
 
     <script type="text/javascript" src="main.js"></script>
   </body>
